@@ -11,8 +11,16 @@
 ```
 Praktikum
 └── 📁Praktikum
-├    ├──📁anggota
-├        ├── list.HTML
-├        └── tambah.HTML
+├    └── 📁jobsheet-1
+├         ├── 📁anggota
+├         ├    ├── list.HTML
+├         ├    └── tambah.HTML
+├         ├── 📁buku
+├         ├    ├── list.HTML
+├         ├    └── tambah.HTML
+├         ├── 📁Dokumentasi
+├         ├    └──laporan.md  
+├         ├── index.HTML
+├
 └── README.md
 ```
