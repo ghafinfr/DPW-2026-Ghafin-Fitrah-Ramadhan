@@ -11,16 +11,31 @@
 ```
 Praktikum
 └── 📁Praktikum
-├    └── 📁jobsheet-1
+├    ├── 📁jobsheet-1
+├    ├    ├── 📁anggota
+├    ├    ├    ├── list.HTML
+├    ├    ├    └── tambah.HTML
+├    ├    ├── 📁buku
+├    ├    ├    ├── list.HTML
+├    ├    ├    └── tambah.HTML
+├    ├    ├── 📁Dokumentasi
+├    ├    ├    └──laporan.md  
+├    ├    ├── index.HTML
+├    ├
+├    ├─ 📁jobsheet-2
 ├         ├── 📁anggota
 ├         ├    ├── list.HTML
 ├         ├    └── tambah.HTML
+├         ├── 📁asset              
+├         ├    └── 📁 css
+├         ├         └── style.css
 ├         ├── 📁buku
 ├         ├    ├── list.HTML
 ├         ├    └── tambah.HTML
 ├         ├── 📁Dokumentasi
 ├         ├    └──laporan.md  
 ├         ├── index.HTML
+├
 ├
 └── README.md
 ```
