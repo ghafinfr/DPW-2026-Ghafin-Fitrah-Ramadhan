@@ -196,7 +196,7 @@ Form tambah buku terdiri dari beberapa field, yaitu:
 </form>
 ```
 ## LATIHAN
-1. menambahkan tambah anggota ke ``index.HTML``,``buku/tambah.HTML``,``buku/list.HTML``. 
+### 1. menambahkan tambah anggota ke ``index.HTML``,``buku/tambah.HTML``,``buku/list.HTML``. 
 
 ## ``buku/list.HTML``
 ```html
@@ -233,4 +233,53 @@ Form tambah buku terdiri dari beberapa field, yaitu:
                 <li><a href="anggota/tambah.html">Tambah Anggota</a></li>
             </ul>
         </nav>
+```
+### 2. Tambah 2 baris data buku baru apa ``buku/list.HTML``
+```html
+                    <tr>
+                        <td>Home Sweet Loan</td>
+                        <td>Almira Bastari</td>
+                        <td>2022</td>
+                        <td>1</td>
+                        <td>
+                            <button type="button">Edit</button>
+                            <button type="button">Hapus</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kata Hati</td>
+                        <td>Tere Liye</td>
+                        <td>2018</td>
+                        <td>3</td>
+                        <td>
+                            <button type="button">Edit</button>
+                            <button type="button">Hapus</button>
+                        </td>
+                    </tr>
+```
+### 3. tambah kolom tanggal bergabung pada tabel anggota 
+```html
+                        <th>tanggal bergabung</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A001</td>
+                        <td>Siti Aminah</td>
+                        <td>Malang</td>
+                        <td>0812xxxx</td>
+                        <td>2023-01-15</td>
+                        <td>
+                            <button type="button">Edit</button>
+                            <button type="button">Hapus</button>
+                        </td>
+                    </tr>
+```
+### 4. tambah field email baru pada form tambah anggota
+```html
+                <p>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email">
+                </p>
 ```
