@@ -55,6 +55,7 @@ body {
 }
 
 /* pemberian warna dan garis bawah Link */
+
 a {
     color: #1d5b8a;
     text-decoration: none;
@@ -140,5 +141,73 @@ footer {
     padding: 1.25rem;
     color: #7a8794;
     font-size: 0.9rem;
+}
+```
+## LATIHAN
+
+### 1. Ubah skema warna pada ``style.css``
+
+## ``header``
+```css
+ /* header Tabel  */
+thead {
+    background-color: #006237;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f7f9fb;
+}
+
+tbody tr:hover {
+    background-color: #eef4fa;
+}
+
+
+```
+## ``judul section``
+```css
+section h2 {
+    margin-bottom: 1rem;
+    color: #006237;
+}
+
+```
+## ``tombol ``
+```css
+/*botton submit*/
+form button[type="submit"] {
+    background-color: #006237;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/*botton input*/
+td button:first-of-type {
+    background-color: #006237;
+    color: #fff;
+}
+
+td button:last-of-type {
+    background-color: #002385;
+    color: #fff;
+}
+
+```
+## ``header tabel``
+```css
+/* Header Navbar */
+header {
+    background-color: #006237;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 ```

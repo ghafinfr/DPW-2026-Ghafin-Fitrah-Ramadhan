@@ -8,12 +8,12 @@
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     color: #2b2b2b;
-    background-color: #f5f6f8;
+    background-color: #fffcfc;
     line-height: 1.5;
 }
 
 a {
-    color: #1d5b8a;
+    color: #006237;
     text-decoration: none;
 }
 
@@ -23,7 +23,7 @@ a:hover {
 
 /* ===== Header & Navbar (Flexbox) ===== */
 header {
-    background-color: #1d5b8a;
+    background-color: #006237;
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
@@ -63,9 +63,11 @@ section {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
+/* ===== Section Titles ===== */
+
 section h2 {
     margin-bottom: 1rem;
-    color: #1d5b8a;
+    color: #006237;
 }
 
 
@@ -106,9 +108,9 @@ th, td {
     padding: 0.65rem 0.75rem;
     border-bottom: 1px solid #e2e6ea;
 }
-
+ /* header Tabel  */
 thead {
-    background-color: #1d5b8a;
+    background-color: #006237;
     color: #fff;
 }
 
@@ -120,6 +122,8 @@ tbody tr:hover {
     background-color: #eef4fa;
 }
 
+/* ===== Tombol Aksi ===== */
+
 td button {
     padding: 0.35rem 0.7rem;
     margin-right: 0.35rem;
@@ -130,12 +134,12 @@ td button {
 }
 
 td button:first-of-type {
-    background-color: #f0ad4e;
+    background-color: #006237;
     color: #fff;
 }
 
 td button:last-of-type {
-    background-color: #d9534f;
+    background-color: #002385;
     color: #fff;
 }
 
@@ -162,8 +166,9 @@ form select {
     font-size: 1rem;
 }
 
+/* Tombol Submit */
 form button[type="submit"] {
-    background-color: #1d5b8a;
+    background-color: #006237;
     color: #fff;
     border: none;
     padding: 0.6rem 1.5rem;
