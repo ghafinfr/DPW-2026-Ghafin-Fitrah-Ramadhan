@@ -1,4 +1,4 @@
-/* ===== Reset & Base ===== */
+/*  Reset & Base  */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -21,7 +21,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ===== Header & Navbar (Flexbox) ===== */
+/*  Header & Navbar */
 header {
     background-color: #006237;
     color: #fff;
@@ -48,7 +48,7 @@ header nav a {
 }
 
 
-/* ===== Main Layout ===== */
+/*  Main Layout  */
 main {
     max-width: 1000px;
     margin: 2rem auto;
@@ -63,7 +63,7 @@ section {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== Section Titles ===== */
+/*  Section Titles  */
 
 section h2 {
     margin-bottom: 1rem;
@@ -71,7 +71,7 @@ section h2 {
 }
 
 
-/* ===== Kartu Statistik (CSS Grid) ===== */
+/*  Kartu Statistik (CSS Grid)  */
 main section:nth-of-type(2) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -97,7 +97,7 @@ main section:nth-of-type(2) article p {
     color: #1d5b8a;
 }
 
-/* ===== Tabel ===== */
+/*  Tabel  */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -122,7 +122,7 @@ tbody tr:hover {
     background-color: #eef4fa;
 }
 
-/* ===== Tombol Aksi ===== */
+/*  Tombol Aksi  */
 
 td button {
     padding: 0.35rem 0.7rem;
