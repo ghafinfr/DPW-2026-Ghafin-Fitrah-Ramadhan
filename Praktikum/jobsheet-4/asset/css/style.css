@@ -213,6 +213,30 @@ footer {
     cursor: pointer;
 }
 
+header {
+   position: relative;
+}
+
+
+.nav-toggle-label {
+    display: block;
+}
+
+header nav {
+    display: none;
+    width: 100%;
+    order: 3;
+    margin-top: 1rem;
+}
+
+.nav-toggle:checked ~ nav {
+    display: block;
+}
+
+headwer nav ul {
+    flex-direction: column;
+}
+
 /*  Responsive Breakpoints  */
 
 /* Tablet kebawah */
