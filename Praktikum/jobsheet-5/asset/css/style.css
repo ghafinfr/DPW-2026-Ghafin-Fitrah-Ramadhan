@@ -227,14 +227,17 @@ header {
 }
 
 header nav {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
     width: 100%;
     order: 3;
-    margin-top: 1rem;
+    margin-top: 0;
+    transition: max-height 0.4s ease-in-out, margin-top 0.4s ease;
 }
 
 header nav.nav-open {
-    display: block;
+    max-height: 250px;
+    margin-top: 0.5rem;
 }
 
 header nav ul {
@@ -287,16 +290,19 @@ header nav ul {
     }
 
     header nav {
-        display: none;
+        max-height: 0;
+        overflow: hidden;
         width: 100%;
         order: 3;
-        margin-top: 1rem;
+        margin-top: 0;
+        transition: max-height 0.4s ease-in-out, margin-top 0.4s ease;
     }
-
-   header nav.nav-open {
-        display: block;
+ 
+    header nav.nav-open {
+        max-height: 250px;
+        margin-top: 0.5rem;
     }
-
+    
     header nav ul {
         flex-direction: column;
         gap: 0.75rem;
