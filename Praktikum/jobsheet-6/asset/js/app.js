@@ -13,16 +13,16 @@ function initNavToggle() {
 function initHapusConfirm() {
     document.addEventListener("click", function (e) {
         const btn = e.target.closest(".btn-hapus");
-        if (btn) return;
+        if (!btn) return;
 
         const row = btn.closest("tr");
         const nama = row ? row.querySelector("td")?.textContent : "data ini";
         const yakin = confirm("Yakin ingin menghapus \"" + nama + "\"?");
-        if (!yakin && row) {
+        if (yakin && row) {
             row.remove();
         }
     });
-};
+}
 
 
 // ===== Filter/pencarian tabel real-time =====
