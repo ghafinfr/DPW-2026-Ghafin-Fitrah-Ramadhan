@@ -46,7 +46,15 @@
 │    │   │   └───js
 │    │   ├───buku
 │    │   ├───data
-│        └───dokumentasi
-│
+│    │   └───dokumentasi
+│    ├───jobsheet-7
+│    │   ├───anggota
+│    │   ├───asset
+│    │   │   ├───css
+│    │   │   └───js
+│    │   ├───buku
+│    │   ├───dokumentasi
+│    │   └───includes
+│    
 └── README.md
 ```
