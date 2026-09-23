@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS buku (
     id SERIAL PRIMARY KEY,
     judul VARCHAR(255) NOT NULL,
     pengarang VARCHAR(255) NOT NULL,
-    tahun_terbitINTEGER NOT NULL,
+    tahun_terbit INTEGER NOT NULL,
     isbn VARCHAR(50),
     stok INTEGER NOT NULL DEFAULT 0,
     kategori VARCHAR(50)
