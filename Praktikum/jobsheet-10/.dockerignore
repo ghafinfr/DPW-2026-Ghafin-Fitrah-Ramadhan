@@ -1,6 +1,5 @@
 .git
 .gitignore
 .vscode
-.env
-.env.*
-README.md
+dokumentasi
+*.md
