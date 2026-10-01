@@ -1,0 +1,16 @@
+[
+  {
+    "id": "PS001",
+    "nama": "Budi Santoso",
+    "jurusan": "Teknik Informatika",
+    "email": "budi@gmail.com",
+    "event": "Seminar AI"
+  },
+  {
+    "id": "PS002",
+    "nama": "Siti Aulia",
+    "jurusan": "Sistem Informasi",
+    "email": "siti@gmail.com",
+    "event": "Workshop UI UX"
+  }
+]

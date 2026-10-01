@@ -1,0 +1,26 @@
+[
+  {
+    "id": "EV001",
+    "namaEvent": "Seminar AI",
+    "kategori": "Seminar",
+    "tanggal": "2026-11-15",
+    "lokasi": "Graha Polinema",
+    "kuota": 150
+  },
+  {
+    "id": "EV002",
+    "namaEvent": "Workshop UI UX",
+    "kategori": "Workshop",
+    "tanggal": "2026-11-20",
+    "lokasi": "Gedung AH",
+    "kuota": 100
+  },
+  {
+    "id": "EV003",
+    "namaEvent": "Kompetisi Programming",
+    "kategori": "Kompetisi",
+    "tanggal": "2026-12-01",
+    "lokasi": "Lab TI",
+    "kuota": 80
+  }
+]

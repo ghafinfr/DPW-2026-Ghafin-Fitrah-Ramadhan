@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EVENTHUB | Tambah Event</title>
+    <link rel="stylesheet" href="../asset/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>EVENTHUB</h1>
+      <button
+        type="button"
+        id="nav-toggle-btn"
+        class="nav-toggle-label"
+        aria-label="Menu"
+      >
+        &#9776;
+      </button>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Beranda</a></li>
+          <li><a href="list.html">Daftar Event</a></li>
+          <li><a href="tambah_event.html">Tambah Event</a></li>
+          <li><a href="../peserta/list.html">Daftar Peserta</a></li>
+          <li><a href="../peserta/tambah_peserta.html">Tambah Peserta</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="form-section">
+        <div class="form-header">
+          <span class="form-icon">+</span>
+
+          <div>
+            <h2>Tambah Event</h2>
+            <p>Tambahkan kegiatan baru yang akan diselenggarakan di kampus.</p>
+          </div>
+        </div>
+
+        <form id="form-tambah">
+          <div class="form-grid">
+            <!-- Nama Event -->
+            <div class="form-group form-full">
+              <label for="namaEvent"> Nama Event </label>
+
+              <input
+                type="text"
+                id="namaEvent"
+                name="namaEvent"
+                placeholder="Contoh: Seminar Artificial Intelligence"
+                required
+              />
+            </div>
+
+            <!-- Kategori -->
+            <div class="form-group">
+              <label for="kategori"> Kategori Event </label>
+
+              <select id="kategori" name="kategori" required>
+                <option value="">Pilih kategori</option>
+                <option value="Seminar">Seminar</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Pelatihan">Pelatihan</option>
+                <option value="Kompetisi">Kompetisi</option>
+              </select>
+            </div>
+
+            <!-- Tanggal -->
+            <div class="form-group">
+              <label for="tanggal"> Tanggal Event </label>
+
+              <input type="date" id="tanggal" name="tanggal" required />
+            </div>
+
+            <!-- Lokasi -->
+            <div class="form-group">
+              <label for="lokasi"> Lokasi </label>
+
+              <input
+                type="text"
+                id="lokasi"
+                name="lokasi"
+                placeholder="Contoh: Graha Polinema"
+                required
+              />
+            </div>
+
+            <!-- Kuota -->
+            <div class="form-group">
+              <label for="kuota"> Kuota Peserta </label>
+
+              <input
+                type="number"
+                id="kuota"
+                name="kuota"
+                placeholder="Contoh: 100"
+                min="1"
+                required
+              />
+            </div>
+
+            <!-- Deskripsi -->
+            <div class="form-group form-full">
+              <label for="deskripsi"> Deskripsi Event </label>
+
+              <textarea
+                id="deskripsi"
+                name="deskripsi"
+                rows="5"
+                placeholder="Jelaskan secara singkat mengenai event yang akan diselenggarakan..."
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Action -->
+          <div class="form-actions">
+            <a href="list.html" class="btn-secondary"> Batal </a>
+
+            <button type="submit" class="btn-primary">Simpan Event</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 EventHub</p>
+    </footer>
+    <script src="../asset/js/app.js"></script>
+  </body>
+</html>

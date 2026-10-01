@@ -1,56 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIMPUS-Mini | Beranda</title>
-    <link rel="stylesheet" href="asset/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EventHub</title>
+    <link rel="stylesheet" href="asset/css/style.css" />
+  </head>
+  <body>
     <header>
-        <h1>SIMPUS-Mini</h1>
-        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
-        <nav>
-            <ul>
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="buku/list.html">Daftar Buku</a></li>
-                <li><a href="buku/tambah.html">Tambah Buku</a></li>
-                <li><a href="anggota/list.html">Daftar Anggota</a></li>
-                <li><a href="anggota/tambah.html">Tambah Anggota</a></li>
-            </ul>
-        </nav>
+      <h1>EVENTHUB</h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="event/list.html">Daftar Event</a></li>
+          <li><a href="event/tambah.html">Tambah Event</a></li>
+          <li><a href="peserta/list.html">Daftar Peserta</a></li>
+          <li><a href="peserta/tambah.html">Tambah Peserta</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Selamat Datang di Sistem Perpustakaan Mini</h2>
-            <p>Aplikasi sederhana untuk mengelola data buku dan anggota perpustakaan.</p>
-        </section>
+      <section>
+        <h2>Selamat Datang di EventHub</h2>
+        <p>
+          Sistem Manajemen Event Kampus untuk mengelola seminar, workshop,
+          pelatihan, dan kompetisi mahasiswa.
+        </p>
+      </section>
 
-        <section>
-            <h2>Ringkasan</h2>
-            <article>
-                <h3>Total Buku</h3>
-                <p>12</p>
-            </article>
-            <article>
-                <h3>Total Anggota</h3>
-                <p>4</p>
-            </article>
-            <article>
-                <h3>Sedang Dipinjam</h3>
-                <p>3</p>
-            </article>
-            <article>
-                <h3>Buku Tersedia</h3>
-                <p>30</p>
-            </article>
-        </section>
+      <section class="dashboard">
+        <article>
+          <h3>Total Event</h3>
+          <p>15</p>
+        </article>
+
+        <article>
+          <h3>Total Peserta</h3>
+          <p>320</p>
+        </article>
+
+        <article>
+          <h3>Event Aktif</h3>
+          <p>8</p>
+        </article>
+
+        <article>
+          <h3>Event Selesai</h3>
+          <p>7</p>
+        </article>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 SIMPUS-Mini </p>
+      <p>© 2026 EventHub</p>
     </footer>
-    <script src="asset/js/app.js"></script>
-</body>
+  </body>
 </html>
