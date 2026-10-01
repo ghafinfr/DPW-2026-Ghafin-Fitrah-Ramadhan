@@ -7,11 +7,15 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Hapus semua MPM Apache yang aktif
+# Matikan semua MPM Apache bawaan
+RUN a2dismod mpm_event mpm_worker mpm_prefork || true
+
+# Hapus konfigurasi MPM yang masih tersisa
 RUN rm -f /etc/apache2/mods-enabled/mpm_*.load \
-          /etc/apache2/mods-enabled/mpm_*.conf \
-    && a2enmod mpm_prefork \
-    && a2enmod rewrite
+          /etc/apache2/mods-enabled/mpm_*.conf
+
+# Aktifkan hanya MPM prefork dan rewrite
+RUN a2enmod mpm_prefork rewrite
 
 # Hapus file bawaan Apache
 RUN rm -rf /var/www/html/*
