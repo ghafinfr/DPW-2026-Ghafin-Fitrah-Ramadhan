@@ -2,7 +2,7 @@
 // Koneksi PostgreSQL: Railway/Supabase menggunakan DATABASE_URL.
 // Untuk lokal, DB_HOST/DB_PORT/DB_NAME/DB_USER/DB_PASSWORD tetap didukung.
 
-$url = getenv('postgresql://postgres:ghafinganteng1@db.rlhttyzfvxvhcbhxbely.supabase.co:5432/postgres');
+$url = getenv('DATABASE_URL');
 
 try {
     if ($url) {
