@@ -1,23 +1,41 @@
 <?php
-// Koneksi PostgreSQL untuk lokal dan DockHosting.
-$host = getenv('DB_HOST') ?: 'localhost';
-$port = getenv('DB_PORT') ?: '5432';
-$db   = getenv('DB_NAME') ?: 'simpus_mini';
-$user = getenv('DB_USER') ?: 'postgres';
-$pass = getenv('DB_PASSWORD') ?: 'ghafin';
+// Koneksi PostgreSQL: Railway/Supabase menggunakan DATABASE_URL.
+// Untuk lokal, DB_HOST/DB_PORT/DB_NAME/DB_USER/DB_PASSWORD tetap didukung.
+
+$url = getenv('postgresql://postgres:ghafinganteng1@db.rlhttyzfvxvhcbhxbely.supabase.co:5432/postgres');
 
 try {
+    if ($url) {
+        $db = parse_url($url);
+
+        if ($db === false || empty($db['host']) || empty($db['user']) || !isset($db['pass'])) {
+            throw new RuntimeException('DATABASE_URL tidak valid.');
+        }
+
+        $host = $db['host'];
+        $port = $db['port'] ?? 5432;
+        $dbname = ltrim($db['path'] ?? '/postgres', '/');
+        $user = $db['user'];
+        $password = rawurldecode($db['pass']);
+    } else {
+        $host = getenv('DB_HOST') ?: 'localhost';
+        $port = getenv('DB_PORT') ?: '5432';
+        $dbname = getenv('DB_NAME') ?: 'simpus_mini';
+        $user = getenv('DB_USER') ?: 'postgres';
+        $password = getenv('DB_PASSWORD') ?: 'ghafin';
+    }
+
     $pdo = new PDO(
-        "pgsql:host=$host;port=$port;dbname=$db",
+        "pgsql:host=$host;port=$port;dbname=$dbname",
         $user,
-        $pass,
+        $password,
         [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]
     );
 
-    // Membuat tabel otomatis jika database masih kosong.
+    // Membuat tabel jika database masih kosong.
     $pdo->exec("CREATE TABLE IF NOT EXISTS buku (
         id SERIAL PRIMARY KEY,
         judul VARCHAR(255) NOT NULL,
@@ -27,7 +45,6 @@ try {
         stok INTEGER NOT NULL DEFAULT 0,
         kategori VARCHAR(50)
     )");
-
     $pdo->exec("CREATE TABLE IF NOT EXISTS anggota (
         id SERIAL PRIMARY KEY,
         nama VARCHAR(255) NOT NULL,
@@ -43,6 +60,7 @@ try {
         password VARCHAR(255) NOT NULL,
         role VARCHAR(20) NOT NULL DEFAULT 'petugas'
     )");
-} catch (PDOException $e) {
-    die("Koneksi database gagal: " . $e->getMessage());
+} catch (Throwable $e) {
+    error_log($e->getMessage());
+    die("Koneksi database gagal.");
 }

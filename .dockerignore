@@ -1,4 +1,6 @@
 .git
 .gitignore
-*.zip
+.vscode
 .env
+.env.*
+README.md
