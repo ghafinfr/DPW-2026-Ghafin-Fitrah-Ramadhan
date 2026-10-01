@@ -8,11 +8,11 @@ if (!$url) {
 
 $db = parse_url($url);
 
-$host = $db['host'];
+$host = $db['host'] ?? '';
 $port = $db['port'] ?? 5432;
-$user = $db['user'];
-$password = $db['pass'];
-$dbname = ltrim($db['path'], '/');
+$user = $db['user'] ?? '';
+$password = $db['pass'] ?? '';
+$dbname = ltrim($db['path'] ?? '', '/');
 
 try {
     $pdo = new PDO(
@@ -24,7 +24,9 @@ try {
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]
     );
+
+    echo "Database berhasil terhubung.";
+    
 } catch (PDOException $e) {
-    error_log($e->getMessage());
-    die("Koneksi database gagal.");
+    die("Koneksi database gagal: " . $e->getMessage());
 }
