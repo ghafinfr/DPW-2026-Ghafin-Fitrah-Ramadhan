@@ -3,24 +3,31 @@ FROM php:8.2-apache
 # Install PostgreSQL dependency
 RUN apt-get update \
     && apt-get install -y libpq-dev \
-    && docker-php-ext-install pdo pdo_pgsql \
+    && docker-php-ext-install pdo_pgsql \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Matikan semua MPM Apache bawaan
-RUN a2dismod mpm_event mpm_worker mpm_prefork || true
+# Bersihkan semua konfigurasi MPM Apache
+RUN find /etc/apache2 -type f \( \
+        -name 'mpm_event.*' -o \
+        -name 'mpm_worker.*' -o \
+        -name 'mpm_prefork.*' \
+    \) -delete
 
-# Hapus konfigurasi MPM yang masih tersisa
-RUN rm -f /etc/apache2/mods-enabled/mpm_*.load \
-          /etc/apache2/mods-enabled/mpm_*.conf
+# Buat konfigurasi MPM prefork
+RUN printf '%s\n' \
+    '<IfModule !mpm_prefork_module>' \
+    '    LoadModule mpm_prefork_module /usr/lib/apache2/modules/mod_mpm_prefork.so' \
+    '</IfModule>' \
+    > /etc/apache2/mods-enabled/mpm_prefork.load
 
-# Aktifkan hanya MPM prefork dan rewrite
-RUN a2enmod mpm_prefork rewrite
+# Aktifkan rewrite
+RUN a2enmod rewrite
 
-# Hapus file bawaan Apache
+# Hapus halaman bawaan Apache
 RUN rm -rf /var/www/html/*
 
-# Gunakan Jobsheet 10 sebagai website utama
+# Copy Jobsheet 10
 COPY Praktikum/jobsheet-10/ /var/www/html/
 
 # Permission
