@@ -10,11 +10,8 @@ RUN apt-get update \
 # Aktifkan rewrite
 RUN a2enmod rewrite
 
-# Hapus aplikasi bawaan Apache
-RUN rm -rf /var/www/html/*
-
-# Copy aplikasi Jobsheet 10
-COPY Praktikum/jobsheet-10/ /var/www/html/
+# Copy seluruh aplikasi Jobsheet 10
+COPY . /var/www/html/
 
 # Permission
 RUN chown -R www-data:www-data /var/www/html
