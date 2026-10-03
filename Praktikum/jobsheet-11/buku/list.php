@@ -53,15 +53,16 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                         <th>Judul</th>
                         <th>Pengarang</th>
                         <th>Tahun</th>
-                        </th>ISBN</th>
+                        <th>ISBN</th>
                         <th>Stok</th>
+                        <th>Kategori</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php if (empty($daftarBuku)): ?>
                     <tr>
-                        <td colspan="5">Tidak ada data buku yang cocok.</td>
+                        <td colspan="7">Tidak ada data buku yang cocok.</td>
                     </tr>
                     <?php else: ?>
                         <?php foreach ($daftarBuku as $buku): ?>
@@ -69,8 +70,9 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                             <td><?php echo e($buku['judul']); ?></td>
                             <td><?php echo e($buku['pengarang']); ?></td>
                             <td><?php echo $buku['tahun']; ?></td>
+                            <td><?php echo e($buku['isbn']); ?></td>
                             <td><?php echo $buku['stok']; ?></td>
-                            </td><?php echo e($buku['isbn']); ?></td>
+                            <td><?php echo e($buku['kategori']); ?></td>
                             <td>
                                 <a href="edit.php?id=<?php echo $buku['id']; ?>" class="btn-edit">Edit</a>
                                 <form class="form-hapus" method="post" action="hapus.php">
