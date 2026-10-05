@@ -9,90 +9,99 @@
 
 ## Struktur
 ```
-├──Praktikum
-│    ├───jobsheet-1
-│    │   ├───anggota
-│    │   ├───buku
-│    │   └───Dokumentasi
-│    ├───jobsheet-2
-│    │   ├───anggota
-│    │   ├───asset
-│    │   │   └───css
-│    │   ├───buku
-│    │   └───dokumentasi
-│    ├───jobsheet-3
-│    │   ├───anggota
-│    │   ├───asset
-│    │   │   └───css
-│    │   ├───buku
-│    │   └───dokumentasi
-│    │───jobsheet-4
-│    │   ├───anggota
-│    │   ├───asset
-│    │   │   └───css
-│    │   ├───buku
-│    │   └───dokumentasi
-│    │──jobsheet-5
-│    │   ├───anggota
-│    │   ├───asset
-│    │   │   ├───css
-│    │   │   └───js
-│    │   ├───buku
-│    │   └───dokumentasi
-│    │───jobsheet-6
-│    │   ├───anggota
-│    │   ├───asset
-│    │   │   ├───css
-│    │   │   └───js
-│    │   ├───buku
-│    │   ├───data
-│    │   └───dokumentasi
-│    ├───jobsheet-7
-│    │   ├───anggota
-│    │   ├───asset
-│    │   │   ├───css
-│    │   │   └───js
-│    │   ├───buku
-│    │   ├───dokumentasi
-│    │   └───includes
-│    ├───jobsheet-8
-│    │   ├───anggota
-│    │   ├───asset
-│    │   │   ├───css
-│    │   │   └───js
-│    │   ├───buku
-│    │   ├───dokumentasi
-│    │   ├───includes
-│    │   └───sql
-│    ├───jobsheet-9
-│    │   ├───anggota
-│    │   ├───assets
-│    │   │   ├───css
-│    │   │   └───js
-│    │   ├───buku
-│    │   ├───dokumentasi
-│    │   ├───includes
-│    │   └───sql
-│    ├───jobsheet-10
-│    │   ├───anggota
-│    │   ├───assets
-│    │   │   ├───css
-│    │   │   └───js
-│    │   ├───auth
-│    │   ├───buku
-│    │   ├───dokumentasi
-│    │   ├───includes
-│    │   └───sql
-│    ├───jobsheet-11
-│    │   ├───anggota
-│    │   ├───assets
-│    │   │   ├───css
-│    │   │   └───js
-│    │   ├───auth
-│    │   ├───buku
-│    │   ├───dokumentasi
-│    │   ├───includes
-│    │   └───sql
-│
-└── README.md
+└───Praktikum
+    ├───jobsheet-01
+    │   ├───anggota
+    │   ├───buku
+    │   └───Dokumentasi
+    ├───jobsheet-02
+    │   ├───anggota
+    │   ├───asset
+    │   │   └───css
+    │   ├───buku
+    │   └───dokumentasi
+    ├───jobsheet-03
+    │   ├───anggota
+    │   ├───asset
+    │   │   └───css
+    │   ├───buku
+    │   └───dokumentasi
+    ├───jobsheet-04
+    │   ├───anggota
+    │   ├───asset
+    │   │   └───css
+    │   ├───buku
+    │   └───dokumentasi
+    ├───jobsheet-05
+    │   ├───anggota
+    │   ├───asset
+    │   │   ├───css
+    │   │   └───js
+    │   ├───buku
+    │   └───dokumentasi
+    ├───jobsheet-06
+    │   ├───anggota
+    │   ├───asset
+    │   │   ├───css
+    │   │   └───js
+    │   ├───buku
+    │   ├───data
+    │   └───dokumentasi
+    ├───jobsheet-07
+    │   ├───anggota
+    │   ├───asset
+    │   │   ├───css
+    │   │   └───js
+    │   ├───buku
+    │   ├───dokumentasi
+    │   └───includes
+    ├───jobsheet-08
+    │   ├───anggota
+    │   ├───asset
+    │   │   ├───css
+    │   │   └───js
+    │   ├───buku
+    │   ├───dokumentasi
+    │   ├───includes
+    │   └───sql
+    ├───jobsheet-09
+    │   ├───anggota
+    │   ├───assets
+    │   │   ├───css
+    │   │   └───js
+    │   ├───buku
+    │   ├───dokumentasi
+    │   ├───includes
+    │   └───sql
+    ├───jobsheet-10
+    │   ├───anggota
+    │   ├───assets
+    │   │   ├───css
+    │   │   └───js
+    │   ├───auth
+    │   ├───buku
+    │   ├───dokumentasi
+    │   ├───includes
+    │   └───sql
+    ├───jobsheet-11
+    │   ├───anggota
+    │   ├───assets
+    │   │   ├───css
+    │   │   └───js
+    │   ├───auth
+    │   ├───buku
+    │   ├───dokumentasi
+    │   ├───includes
+    │   └───sql
+    └───jobsheet-12
+        ├───anggota
+        ├───assets
+        │   ├───css
+        │   └───js
+        ├───auth
+        ├───buku
+        ├───dokumentasi
+        ├───includes
+        ├───peminjaman
+        └───sql
 ```
