@@ -63,11 +63,9 @@ body {
   color: var(--text);
 
   background:
-    radial-gradient(
-      circle at top right,
+    radial-gradient(circle at top right,
       rgba(124, 58, 237, 0.07),
-      transparent 30%
-    ),
+      transparent 30%),
     var(--background);
 
   line-height: 1.6;
@@ -266,7 +264,7 @@ section h2 {
   letter-spacing: -0.3px;
 }
 
-section > p {
+section>p {
   color: var(--text-light);
 
   font-size: 0.95rem;
