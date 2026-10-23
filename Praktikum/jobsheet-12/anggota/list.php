@@ -92,4 +92,4 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                 <?php endfor; ?>
             </nav>
         </section>
-<?php include __DIR__ . '/../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?> 
